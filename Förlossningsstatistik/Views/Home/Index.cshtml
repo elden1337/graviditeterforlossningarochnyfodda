@@ -13,7 +13,14 @@
 <div>
     <table>
         <thead>
-
+            <tr>
+                <td>År</td>
+                <td>Region</td>
+                <td>Åldersgrupp</td>
+                <td>Paritet</td>
+                <td>Variabel</td>
+                <td>Antal barn</td>
+            </tr>
         </thead>
         <tbody>
             @foreach (var item in Model.Items.Where(x => x.Babies > 0))
