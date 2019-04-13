@@ -1,0 +1,47 @@
+﻿@model Förlossningsstatistik.Models.IndexViewModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+@*public string Variable { get; set; }
+
+    public string Parity { get; set; }
+    public int Year { get; set; }
+    public int Babies { get; set; }*@
+
+<div>
+    <table>
+        <thead>
+
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Items.Where(x => x.Babies > 0))
+            {
+            <tr>
+                <td>
+                    @item.Year
+                </td>
+                <td>
+                    @item.Region
+                </td>
+                <td>
+                    @item.AgeSpan
+                </td>
+                <td>
+                    @item.Parity
+                </td>
+                <td>
+                    @item.Variable
+                </td>
+                <td>
+                    <b>
+                        @item.Babies
+                    </b>
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>
+
+</div>
